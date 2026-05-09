@@ -58,7 +58,6 @@ jobs:
           fi
 
       - name: Archive
-        if: ${{ steps.signing.outputs.has_signing == 'true' }}
         run: |
           xcodebuild \
             -project "$PROJECT_PATH" \
@@ -67,16 +66,25 @@ jobs:
             -sdk iphoneos \
             -destination "$DESTINATION" \
             -archivePath "$ARCHIVE_PATH" \
-            archive
+            archive \
+            $XCODE_UNSIGNED_FLAGS
 
       - name: Export IPA
-        if: ${{ steps.signing.outputs.has_signing == 'true' }}
+        env:
+          HAS_SIGNING: ${{ steps.signing.outputs.has_signing }}
         run: |
-          xcodebuild \
-            -exportArchive \
-            -archivePath "$ARCHIVE_PATH" \
-            -exportOptionsPlist "$EXPORT_OPTIONS_PLIST" \
-            -exportPath "$EXPORT_PATH"
+          if [ "$HAS_SIGNING" = "true" ]; then
+            xcodebuild \
+              -exportArchive \
+              -archivePath "$ARCHIVE_PATH" \
+              -exportOptionsPlist "$EXPORT_OPTIONS_PLIST" \
+              -exportPath "$EXPORT_PATH"
+          else
+            mkdir -p "$EXPORT_PATH/Payload"
+            cp -R "$ARCHIVE_PATH/Products/Applications/ExenosCode.app" "$EXPORT_PATH/Payload/"
+            cd "$EXPORT_PATH"
+            /usr/bin/zip -r ExenosCode-unsigned.ipa Payload
+          fi
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v5
