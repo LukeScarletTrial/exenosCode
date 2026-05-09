@@ -95,19 +95,18 @@ struct EditorWorkspaceView: View {
         .navigationTitle("Files")
     }
 
-    @ViewBuilder
-    private func nodeView(_ node: ProjectFileModel, depth: CGFloat) -> some View {
+    private func nodeView(_ node: ProjectFileModel, depth: CGFloat) -> AnyView {
         if node.kind == .folder {
-            DisclosureGroup {
+            return AnyView(DisclosureGroup {
                 ForEach(node.children) { child in
                     nodeView(child, depth: depth + 1)
                 }
             } label: {
                 Label(node.name, systemImage: "folder")
                     .padding(.leading, depth * 6)
-            }
+            })
         } else {
-            Button {
+            return AnyView(Button {
                 appModel.selectFile(path: node.path)
             } label: {
                 HStack {
@@ -119,7 +118,7 @@ struct EditorWorkspaceView: View {
                 .background(appModel.selectedFilePath == node.path ? Color.accentColor.opacity(0.12) : .clear)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(.plain))
         }
     }
 
