@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00100012026050900000001 /* ExenosCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100012026050900000011 /* ExenosCodeApp.swift */; };
+		A00100022026050900000001 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100022026050900000011 /* AppModel.swift */; };
+		A00100032026050900000001 /* EditorWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100032026050900000011 /* EditorWorkspaceView.swift */; };
+		A00100042026050900000001 /* SyntaxHighlightingTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100042026050900000011 /* SyntaxHighlightingTextEditor.swift */; };
+		A00100052026050900000001 /* EngineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100052026050900000011 /* EngineState.swift */; };
+		A00100062026050900000001 /* RenderRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100062026050900000011 /* RenderRuntime.swift */; };
+		A00100072026050900000001 /* EngineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100072026050900000011 /* EngineController.swift */; };
+		A00100082026050900000001 /* SpriteRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100082026050900000011 /* SpriteRuntime.swift */; };
+		A00100092026050900000001 /* SpriteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100092026050900000011 /* SpriteScene.swift */; };
+		A00100102026050900000001 /* SpritePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100102026050900000011 /* SpritePreviewView.swift */; };
+		A00100112026050900000001 /* SceneRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100112026050900000011 /* SceneRuntime.swift */; };
+		A00100122026050900000001 /* ScenePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100122026050900000011 /* ScenePreviewView.swift */; };
+		A00100132026050900000001 /* LuaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100132026050900000011 /* LuaManager.swift */; };
+		A00100142026050900000001 /* LuaBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00100142026050900000011 /* LuaBindings.swift */; };
+		A00100152026050900000001 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100152026050900000011 /* lapi.c */; };
+		A00100162026050900000001 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100162026050900000011 /* lauxlib.c */; };
+		A00100172026050900000001 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100172026050900000011 /* lbaselib.c */; };
+		A00100182026050900000001 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100182026050900000011 /* lcode.c */; };
+		A00100192026050900000001 /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100192026050900000011 /* lctype.c */; };
+		A00100202026050900000001 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100202026050900000011 /* ldebug.c */; };
+		A00100212026050900000001 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100212026050900000011 /* ldo.c */; };
+		A00100222026050900000001 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100222026050900000011 /* ldump.c */; };
+		A00100232026050900000001 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100232026050900000011 /* lfunc.c */; };
+		A00100242026050900000001 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100242026050900000011 /* lgc.c */; };
+		A00100252026050900000001 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100252026050900000011 /* llex.c */; };
+		A00100262026050900000001 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100262026050900000011 /* lmem.c */; };
+		A00100272026050900000001 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100272026050900000011 /* lobject.c */; };
+		A00100282026050900000001 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100282026050900000011 /* lopcodes.c */; };
+		A00100292026050900000001 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100292026050900000011 /* lparser.c */; };
+		A00100302026050900000001 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100302026050900000011 /* lstate.c */; };
+		A00100312026050900000001 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100312026050900000011 /* lstring.c */; };
+		A00100322026050900000001 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100322026050900000011 /* ltable.c */; };
+		A00100332026050900000001 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100332026050900000011 /* ltm.c */; };
+		A00100342026050900000001 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100342026050900000011 /* lundump.c */; };
+		A00100352026050900000001 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100352026050900000011 /* lvm.c */; };
+		A00100362026050900000001 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100362026050900000011 /* lzio.c */; };
+		A00100372026050900000001 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = A00100372026050900000011 /* linit.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00100012026050900000011 /* ExenosCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExenosCodeApp.swift; sourceTree = "<group>"; };
+		A00100022026050900000011 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A00100032026050900000011 /* EditorWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWorkspaceView.swift; sourceTree = "<group>"; };
+		A00100042026050900000011 /* SyntaxHighlightingTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightingTextEditor.swift; sourceTree = "<group>"; };
+		A00100052026050900000011 /* EngineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineState.swift; sourceTree = "<group>"; };
+		A00100062026050900000011 /* RenderRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderRuntime.swift; sourceTree = "<group>"; };
+		A00100072026050900000011 /* EngineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineController.swift; sourceTree = "<group>"; };
+		A00100082026050900000011 /* SpriteRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteRuntime.swift; sourceTree = "<group>"; };
+		A00100092026050900000011 /* SpriteScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteScene.swift; sourceTree = "<group>"; };
+		A00100102026050900000011 /* SpritePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritePreviewView.swift; sourceTree = "<group>"; };
+		A00100112026050900000011 /* SceneRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRuntime.swift; sourceTree = "<group>"; };
+		A00100122026050900000011 /* ScenePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePreviewView.swift; sourceTree = "<group>"; };
+		A00100132026050900000011 /* LuaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaManager.swift; sourceTree = "<group>"; };
+		A00100142026050900000011 /* LuaBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaBindings.swift; sourceTree = "<group>"; };
+		A00100152026050900000011 /* lapi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
+		A00100162026050900000011 /* lauxlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
+		A00100172026050900000011 /* lbaselib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
+		A00100182026050900000011 /* lcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
+		A00100192026050900000011 /* lctype.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lctype.c; sourceTree = "<group>"; };
+		A00100202026050900000011 /* ldebug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
+		A00100212026050900000011 /* ldo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		A00100222026050900000011 /* ldump.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldump.c; sourceTree = "<group>"; };
+		A00100232026050900000011 /* lfunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lfunc.c; sourceTree = "<group>"; };
+		A00100242026050900000011 /* lgc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		A00100252026050900000011 /* llex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = llex.c; sourceTree = "<group>"; };
+		A00100262026050900000011 /* lmem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		A00100272026050900000011 /* lobject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
+		A00100282026050900000011 /* lopcodes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lopcodes.c; sourceTree = "<group>"; };
+		A00100292026050900000011 /* lparser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lparser.c; sourceTree = "<group>"; };
+		A00100302026050900000011 /* lstate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
+		A00100312026050900000011 /* lstring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstring.c; sourceTree = "<group>"; };
+		A00100322026050900000011 /* ltable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltable.c; sourceTree = "<group>"; };
+		A00100332026050900000011 /* ltm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		A00100342026050900000011 /* lundump.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lundump.c; sourceTree = "<group>"; };
+		A00100352026050900000011 /* lvm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lvm.c; sourceTree = "<group>"; };
+		A00100362026050900000011 /* lzio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
+		A00100372026050900000011 /* linit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linit.c; sourceTree = "<group>"; };
+		A00100992026050900000011 /* ExenosCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ExenosCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00110012026050900000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00120012026050900000001 = {
+			isa = PBXGroup;
+			children = (
+				A00120022026050900000001 /* ExenosCode */,
+				A00120032026050900000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00120022026050900000001 /* ExenosCode */ = {
+			isa = PBXGroup;
+			children = (
+				A00120042026050900000001 /* App */,
+				A00120052026050900000001 /* IDE */,
+				A00120062026050900000001 /* Engine */,
+				A00120072026050900000001 /* Renderer2D */,
+				A00120082026050900000001 /* Renderer3D */,
+				A00120092026050900000001 /* Scripting */,
+			);
+			path = ExenosCode;
+			sourceTree = "<group>";
+		};
+		A00120032026050900000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00100992026050900000011 /* ExenosCode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A00120042026050900000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A00100012026050900000011 /* ExenosCodeApp.swift */,
+				A00100022026050900000011 /* AppModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A00120052026050900000001 /* IDE */ = {
+			isa = PBXGroup;
+			children = (
+				A00100032026050900000011 /* EditorWorkspaceView.swift */,
+				A00100042026050900000011 /* SyntaxHighlightingTextEditor.swift */,
+			);
+			path = IDE;
+			sourceTree = "<group>";
+		};
+		A00120062026050900000001 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				A00100052026050900000011 /* EngineState.swift */,
+				A00100062026050900000011 /* RenderRuntime.swift */,
+				A00100072026050900000011 /* EngineController.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		A00120072026050900000001 /* Renderer2D */ = {
+			isa = PBXGroup;
+			children = (
+				A00100082026050900000011 /* SpriteRuntime.swift */,
+				A00100092026050900000011 /* SpriteScene.swift */,
+				A00100102026050900000011 /* SpritePreviewView.swift */,
+			);
+			path = Renderer2D;
+			sourceTree = "<group>";
+		};
+		A00120082026050900000001 /* Renderer3D */ = {
+			isa = PBXGroup;
+			children = (
+				A00100112026050900000011 /* SceneRuntime.swift */,
+				A00100122026050900000011 /* ScenePreviewView.swift */,
+			);
+			path = Renderer3D;
+			sourceTree = "<group>";
+		};
+		A00120092026050900000001 /* Scripting */ = {
+			isa = PBXGroup;
+			children = (
+				A00120102026050900000001 /* Lua */,
+			);
+			path = Scripting;
+			sourceTree = "<group>";
+		};
+		A00120102026050900000001 /* Lua */ = {
+			isa = PBXGroup;
+			children = (
+				A00100132026050900000011 /* LuaManager.swift */,
+				A00100142026050900000011 /* LuaBindings.swift */,
+				A00100152026050900000011 /* lapi.c */,
+				A00100162026050900000011 /* lauxlib.c */,
+				A00100172026050900000011 /* lbaselib.c */,
+				A00100182026050900000011 /* lcode.c */,
+				A00100192026050900000011 /* lctype.c */,
+				A00100202026050900000011 /* ldebug.c */,
+				A00100212026050900000011 /* ldo.c */,
+				A00100222026050900000011 /* ldump.c */,
+				A00100232026050900000011 /* lfunc.c */,
+				A00100242026050900000011 /* lgc.c */,
+				A00100252026050900000011 /* llex.c */,
+				A00100262026050900000011 /* lmem.c */,
+				A00100272026050900000011 /* lobject.c */,
+				A00100282026050900000011 /* lopcodes.c */,
+				A00100292026050900000011 /* lparser.c */,
+				A00100302026050900000011 /* lstate.c */,
+				A00100312026050900000011 /* lstring.c */,
+				A00100322026050900000011 /* ltable.c */,
+				A00100332026050900000011 /* ltm.c */,
+				A00100342026050900000011 /* lundump.c */,
+				A00100352026050900000011 /* lvm.c */,
+				A00100362026050900000011 /* lzio.c */,
+				A00100372026050900000011 /* linit.c */,
+			);
+			path = Lua;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00130012026050900000001 /* ExenosCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00140012026050900000001 /* Build configuration list for PBXNativeTarget "ExenosCode" */;
+			buildPhases = (
+				A00150012026050900000001 /* Sources */,
+				A00110012026050900000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExenosCode;
+			productName = ExenosCode;
+			productReference = A00100992026050900000011 /* ExenosCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00160012026050900000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A00130012026050900000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A00160022026050900000001 /* Build configuration list for PBXProject "ExenosCode" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00120012026050900000001;
+			productRefGroup = A00120032026050900000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00130012026050900000001 /* ExenosCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00150012026050900000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00100012026050900000001 /* ExenosCodeApp.swift in Sources */,
+				A00100022026050900000001 /* AppModel.swift in Sources */,
+				A00100032026050900000001 /* EditorWorkspaceView.swift in Sources */,
+				A00100042026050900000001 /* SyntaxHighlightingTextEditor.swift in Sources */,
+				A00100052026050900000001 /* EngineState.swift in Sources */,
+				A00100062026050900000001 /* RenderRuntime.swift in Sources */,
+				A00100072026050900000001 /* EngineController.swift in Sources */,
+				A00100082026050900000001 /* SpriteRuntime.swift in Sources */,
+				A00100092026050900000001 /* SpriteScene.swift in Sources */,
+				A00100102026050900000001 /* SpritePreviewView.swift in Sources */,
+				A00100112026050900000001 /* SceneRuntime.swift in Sources */,
+				A00100122026050900000001 /* ScenePreviewView.swift in Sources */,
+				A00100132026050900000001 /* LuaManager.swift in Sources */,
+				A00100142026050900000001 /* LuaBindings.swift in Sources */,
+				A00100152026050900000001 /* lapi.c in Sources */,
+				A00100162026050900000001 /* lauxlib.c in Sources */,
+				A00100172026050900000001 /* lbaselib.c in Sources */,
+				A00100182026050900000001 /* lcode.c in Sources */,
+				A00100192026050900000001 /* lctype.c in Sources */,
+				A00100202026050900000001 /* ldebug.c in Sources */,
+				A00100212026050900000001 /* ldo.c in Sources */,
+				A00100222026050900000001 /* ldump.c in Sources */,
+				A00100232026050900000001 /* lfunc.c in Sources */,
+				A00100242026050900000001 /* lgc.c in Sources */,
+				A00100252026050900000001 /* llex.c in Sources */,
+				A00100262026050900000001 /* lmem.c in Sources */,
+				A00100272026050900000001 /* lobject.c in Sources */,
+				A00100282026050900000001 /* lopcodes.c in Sources */,
+				A00100292026050900000001 /* lparser.c in Sources */,
+				A00100302026050900000001 /* lstate.c in Sources */,
+				A00100312026050900000001 /* lstring.c in Sources */,
+				A00100322026050900000001 /* ltable.c in Sources */,
+				A00100332026050900000001 /* ltm.c in Sources */,
+				A00100342026050900000001 /* lundump.c in Sources */,
+				A00100352026050900000001 /* lvm.c in Sources */,
+				A00100362026050900000001 /* lzio.c in Sources */,
+				A00100372026050900000001 /* linit.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00170012026050900000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exenos.code;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExenosCode/Scripting/Lua/ExenosCode-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A00170022026050900000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exenos.code;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExenosCode/Scripting/Lua/ExenosCode-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A00170032026050900000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExenosCode/Scripting/Lua",
+					"$(PROJECT_DIR)/ExenosCode/Scripting/Lua/lua-src",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A00170042026050900000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExenosCode/Scripting/Lua",
+					"$(PROJECT_DIR)/ExenosCode/Scripting/Lua/lua-src",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00140012026050900000001 /* Build configuration list for PBXNativeTarget "ExenosCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00170012026050900000001 /* Debug */,
+				A00170022026050900000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00160022026050900000001 /* Build configuration list for PBXProject "ExenosCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00170032026050900000001 /* Debug */,
+				A00170042026050900000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00160012026050900000001 /* Project object */;
+}
