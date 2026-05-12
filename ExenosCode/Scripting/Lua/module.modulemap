@@ -1,6 +1,0 @@
-module Lua [system] {
-    header "lua-src/lua.h"
-    header "lua-src/lauxlib.h"
-    header "lua-src/lualib.h"
-    export *
-}
