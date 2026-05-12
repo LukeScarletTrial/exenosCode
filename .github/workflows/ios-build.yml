@@ -20,6 +20,28 @@ jobs:
         with:
           xcode-version: "15.2"
       
+name: iOS Build
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "15.2"
+      
       - name: Build ExenosCode
         run: |
           xcodebuild -project ExenosCode.xcodeproj \
@@ -31,6 +53,32 @@ jobs:
             CODE_SIGN_IDENTITY="-" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO
+      
+      - name: Archive IPA
+        run: |
+          xcodebuild -project ExenosCode.xcodeproj \
+            -scheme ExenosCode \
+            -configuration Release \
+            -archivePath build/ExenosCode.xcarchive \
+            -archive \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+      
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/ExenosCode.xcarchive \
+            -exportPath build/export \
+            -exportOptionsPList ExportOptions.plist
+      
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExenosCode-iOS
+          path: build/export/*.ipa
+          retention-days: 30
+
       
       - name: Archive IPA
         run: |
