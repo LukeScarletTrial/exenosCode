@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExenosIDE.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="AntigravityBackground">#0A0A0F</Color>
+            <Color x:Key="AntigravitySurface">#12121A</Color>
+            <Color x:Key="AntigravityElevated">#161622</Color>
+            <Color x:Key="AntigravityBorder">#2A2A3A</Color>
+            <Color x:Key="AntigravityMuted">#5A5A6A</Color>
+            <Color x:Key="AntigravityText">#FFFFFF</Color>
+            <Color x:Key="NeonCyan">#00F0FF</Color>
+            <Color x:Key="NeonMagenta">#FF5A8C</Color>
+            <Color x:Key="NeonViolet">#8C5AFF</Color>
+            
+            <Style TargetType="Page">
+                <Setter Property="BackgroundColor" Value="{StaticResource AntigravityBackground}"/>
+            </Style>
+            
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource AntigravitySurface}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource AntigravityText}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
