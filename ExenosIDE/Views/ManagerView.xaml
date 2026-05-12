@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExenosIDE.Views"
+             x:Class="ExenosIDE.Views.ManagerView"
+             BackgroundColor="#0A0A0F"
+             Title="Exenos Manager">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+        
+        <Grid Grid.Row="0" 
+              BackgroundColor="#12121A"
+              Padding="20,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="0"
+                   Text="EXENOS CODE"
+                   FontFamily="SFMono"
+                   FontSize="14"
+                   TextColor="#00F0FF"
+                   VerticalOptions="Center"/>
+            
+            <Label Grid.Column="1"
+                   Text="MANAGER VIEW"
+                   FontFamily="SFPro"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#FFFFFF"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Opacity="0.9"/>
+            
+            <Frame Grid.Column="2"
+                   BackgroundColor="#00F0FF20"
+                   BorderColor="#00F0FF"
+                   CornerRadius="4"
+                   Padding="12,4"
+                   HasShadow="False">
+                <Label Text="ANTIGRAVITY"
+                       FontSize="10"
+                       TextColor="#00F0FF"
+                       FontAttributes="Bold"/>
+            </Frame>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="16" Padding="16">
+                
+                <Frame BackgroundColor="#161622"
+                       BorderColor="#2A2A3A"
+                       CornerRadius="12"
+                       Padding="20"
+                       HasShadow="False">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="ENGINE STATUS"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B6B7B"/>
+                        
+                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto">
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="4">
+                                <Label Text="{Binding Metrics.VmVersion}"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="#FFFFFF"/>
+                                <Label Text="VM VERSION"
+                                       FontSize="9"
+                                       TextColor="#5A5A6A"/>
+                            </VerticalStackLayout>
+                            
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="4">
+                                <Label Text="{Binding Metrics.FrameRate, StringFormat='{0} FPS'}"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="#00F0FF"/>
+                                <Label Text="RENDER"
+                                       FontSize="9"
+                                       TextColor="#5A5A6A"/>
+                            </VerticalStackLayout>
+                            
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="2" Spacing="4">
+                                <Label Text="{Binding Metrics.MemoryUsage, StringFormat='{0:F1} MB'}"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="#FF5A8C"/>
+                                <Label Text="MEMORY"
+                                       FontSize="9"
+                                       TextColor="#5A5A6A"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                        
+                        <BoxView HeightRequest="1" 
+                                 Color="#2A2A3A" 
+                                 Margin="0,8"/>
+                        
+                        <HorizontalStackLayout Spacing="12">
+                            <Frame BackgroundColor="#00F0FF15"
+                                   BorderColor="#00F0FF40"
+                                   CornerRadius="6"
+                                   Padding="12,6"
+                                   HasShadow="False">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Ellipse WidthRequest="8" 
+                                             HeightRequest="8"
+                                             Fill="#00F0FF"/>
+                                    <Label Text="METAL"
+                                           FontSize="10"
+                                           FontAttributes="Bold"
+                                           TextColor="#00F0FF"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                            
+                            <Frame BackgroundColor="#FF5A8C15"
+                                   BorderColor="#FF5A8C40"
+                                   CornerRadius="6"
+                                   Padding="12,6"
+                                   HasShadow="False">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Ellipse WidthRequest="8" 
+                                             HeightRequest="8"
+                                             Fill="#FF5A8C"/>
+                                    <Label Text="HOT RELOAD"
+                                           FontSize="10"
+                                           FontAttributes="Bold"
+                                           TextColor="#FF5A8C"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                            
+                            <Frame BackgroundColor="#8C5AFF15"
+                                   BorderColor="#8C5AFF40"
+                                   CornerRadius="6"
+                                   Padding="12,6"
+                                   HasShadow="False">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Ellipse WidthRequest="8" 
+                                             HeightRequest="8"
+                                             Fill="#8C5AFF"/>
+                                    <Label Text="ARM64"
+                                           FontSize="10"
+                                           FontAttributes="Bold"
+                                           TextColor="#8C5AFF"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#161622"
+                           BorderColor="#2A2A3A"
+                           CornerRadius="12"
+                           Padding="16"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="C RENDERER"
+                                   FontSize="11"
+                                   FontAttributes="Bold"
+                                   TextColor="#6B6B7B"/>
+                            
+                            <ProgressBar Progress="{Binding CRendererProgress}"
+                                        ProgressColor="#00F0FF"/>
+                            
+                            <Label Text="{Binding CRendererStatus}"
+                                   FontSize="12"
+                                   TextColor="#FFFFFF"
+                                   Opacity="0.8"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                    
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#161622"
+                           BorderColor="#2A2A3A"
+                           CornerRadius="12"
+                           Padding="16"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="C# EDITOR"
+                                   FontSize="11"
+                                   FontAttributes="Bold"
+                                   TextColor="#6B6B7B"/>
+                            
+                            <ProgressBar Progress="{Binding CSharpEditorProgress}"
+                                        ProgressColor="#FF5A8C"/>
+                            
+                            <Label Text="{Binding CSharpEditorStatus}"
+                                   FontSize="12"
+                                   TextColor="#FFFFFF"
+                                   Opacity="0.8"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <Frame BackgroundColor="#161622"
+                       BorderColor="#2A2A3A"
+                       CornerRadius="12"
+                       Padding="16"
+                       HasShadow="False">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="HOT RELOAD LOG"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B6B7B"/>
+                        
+                        <Label Text="{Binding Metrics.LastReloadPath}"
+                               FontSize="12"
+                               FontFamily="SFMono"
+                               TextColor="#8C5AFF"
+                               LineBreakMode="MiddleTruncation"/>
+                        
+                        <Label Text="{Binding Metrics.LastReloadTime, StringFormat='{}{0:HH:mm:ss.fff}'}"
+                               FontSize="10"
+                               TextColor="#5A5A6A"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#161622"
+                       BorderColor="#2A2A3A"
+                       CornerRadius="12"
+                       Padding="16"
+                       HasShadow="False">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="WATCHED FILES"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B6B7B"/>
+                        
+                        <Label Text="{Binding Metrics.RegisteredFiles, StringFormat='{}{0} .luaz files monitored'}"
+                               FontSize="12"
+                               TextColor="#FFFFFF"
+                               Opacity="0.8"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="2" 
+              BackgroundColor="#12121A"
+              Padding="16,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Column="0"
+                    Text="START WATCH"
+                    BackgroundColor="#00F0FF20"
+                    TextColor="#00F0FF"
+                    BorderColor="#00F0FF"
+                    BorderWidth="1"
+                    CornerRadius="6"
+                    FontSize="12"
+                    Clicked="OnStartWatchClicked"/>
+            
+            <Button Grid.Column="2"
+                    Text="RELOAD NOW"
+                    BackgroundColor="#FF5A8C20"
+                    TextColor="#FF5A8C"
+                    BorderColor="#FF5A8C"
+                    BorderWidth="1"
+                    CornerRadius="6"
+                    FontSize="12"
+                    Clicked="OnReloadNowClicked"/>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
